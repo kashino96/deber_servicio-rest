@@ -27,3 +27,12 @@ The goals of this project are:
 * Show different screen states (loading & error).
 * Implement a list.
 * Use a third-party library to load a remote image.
+
+### Links
+* [GitHub Developer]
+
+### Sample
+![Alt Text](https://eimtgit.uoc.edu/docente_android/android1-pec3-restservice/raw/master/resources/example_github_app.gif)
+
+
+[GitHub Developer]: <https://developer.github.com/v3/>
