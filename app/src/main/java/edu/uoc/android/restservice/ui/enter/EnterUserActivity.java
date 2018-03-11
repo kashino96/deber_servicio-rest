@@ -21,8 +21,8 @@ public class EnterUserActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void initViews() {
-        etUser = (EditText) findViewById(R.id.enter_user_edit_text);
-        btnFollowers = (Button) findViewById(R.id.enter_user_button);
+        etUser = findViewById(R.id.enter_user_edit_text);
+        btnFollowers = findViewById(R.id.enter_user_button);
         btnFollowers.setOnClickListener(this);
     }
 

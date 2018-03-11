@@ -3,3 +3,6 @@
 .gradle
 /local.properties
 /build
+
+.idea/instapk.xml
+instapk.log*
