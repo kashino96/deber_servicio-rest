@@ -1,5 +1,7 @@
 package edu.uoc.android.restservice.rest.adapter;
 
+import java.util.List;
+
 import edu.uoc.android.restservice.rest.contants.ApiConstants;
 import edu.uoc.android.restservice.rest.model.Owner;
 import edu.uoc.android.restservice.rest.service.GitHubService;
@@ -17,5 +19,10 @@ public class GitHubAdapter extends BaseAdapter implements GitHubService {
     @Override
     public Call<Owner> getOwner(String owner) {
         return gitHubService.getOwner(owner);
+    }
+
+    @Override
+    public Call<List<Owner>> getOwnerFollowers(String owner) {
+        return gitHubService.getOwnerFollowers(owner);
     }
 }

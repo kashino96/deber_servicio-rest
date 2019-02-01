@@ -1,12 +1,18 @@
 package edu.uoc.android.restservice.ui.enter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import edu.uoc.android.restservice.R;
+import edu.uoc.android.restservice.rest.adapter.GitHubAdapter;
+import edu.uoc.android.restservice.rest.model.Owner;
 
 public class EnterUserActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -20,6 +26,8 @@ public class EnterUserActivity extends AppCompatActivity implements View.OnClick
         initViews();
     }
 
+
+
     private void initViews() {
         etUser = findViewById(R.id.enter_user_edit_text);
         btnFollowers = findViewById(R.id.enter_user_button);
@@ -30,6 +38,10 @@ public class EnterUserActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         if (v == btnFollowers) {
             // TODO: Go to nex activity
+            // Ir a la Siguiente Actividad
+            Intent intent = new Intent(EnterUserActivity.this, InfoUserActivity.class);
+            intent.putExtra("loginName", etUser.getText().toString());
+            startActivity(intent);
         }
     }
 }
